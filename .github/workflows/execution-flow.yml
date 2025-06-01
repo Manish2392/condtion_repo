@@ -84,5 +84,5 @@ jobs:
       - name: Output information
         run: |
           echo "There was an error in the workflow. Please check the logs for details."
-          ech0 "${{ github }}"
+          echo "${{ github }}"
 
