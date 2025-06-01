@@ -76,3 +76,12 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  Report:
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output information
+        run: |
+          echo "There was an error in the workflow. Please check the logs for details."
+          ech0 "${{ github }}"
+
